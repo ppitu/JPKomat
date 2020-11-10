@@ -11,9 +11,11 @@ CONFIG += c++11
 SOURCES += \
     main.cpp \
     mainwindow.cpp
+    CommonCode/Code/JPK/jpkreader.cpp
 
 HEADERS += \
     mainwindow.h
+    CommonCode/Code/JPK/jpkreader.h
 
 FORMS += \
     mainwindow.ui
