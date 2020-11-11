@@ -1,4 +1,5 @@
 QT       += core gui
+QT      += xml
 
 greaterThan(QT_MAJOR_VERSION, 4): QT += widgets
 
@@ -9,13 +10,17 @@ CONFIG += c++11
 #DEFINES += QT_DISABLE_DEPRECATED_BEFORE=0x060000    # disables all the APIs deprecated before Qt 6.0.0
 
 SOURCES += \
+    CommonCode/JPK/headline.cpp \
+    CommonCode/JPK/invoicesales.cpp \
+    CommonCode/JPK/jpkreader.cpp \
     main.cpp \
     mainwindow.cpp
-    CommonCode/Code/JPK/jpkreader.cpp
 
 HEADERS += \
+    CommonCode/JPK/headline.h \
+    CommonCode/JPK/invoicesales.h \
+    CommonCode/JPK/jpkreader.h \
     mainwindow.h
-    CommonCode/Code/JPK/jpkreader.h
 
 FORMS += \
     mainwindow.ui
