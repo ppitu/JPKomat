@@ -40,7 +40,7 @@ void Headline::setYear(int value)
     m_year = value;
 }
 
-void Headline::setmonth(int value)
+void Headline::setMonth(int value)
 {
     m_month = value;
 }

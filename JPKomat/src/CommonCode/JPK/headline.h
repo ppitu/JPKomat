@@ -17,7 +17,7 @@ public:
     void setPruposeOfDeposit(int value = 0);
     void setOfficeCode(int value = 0);
     void setYear(int value = 0);
-    void setmonth(int value = 0);
+    void setMonth(int value = 0);
 
     QString getFormCode() const;
     QString getVariantForm() const;
