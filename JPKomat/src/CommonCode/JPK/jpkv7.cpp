@@ -1,11 +1,11 @@
-#include "jpk.h"
+#include "jpkv7.h"
 
-JPK::JPK()
+JPKV7::JPKV7()
 {
     m_jpkreader.readHeadline(m_headline);
 }
 
-Headline JPK::getHeadline()
+Headline JPKV7::getHeadline()
 {
     return m_headline;
 }

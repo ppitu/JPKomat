@@ -12,16 +12,16 @@ CONFIG += c++11
 SOURCES += \
     CommonCode/JPK/headline.cpp \
     CommonCode/JPK/invoicesales.cpp \
-    CommonCode/JPK/jpk.cpp \
-    CommonCode/JPK/jpkreader.cpp \
+    CommonCode/JPK/jpkv7.cpp \
+    CommonCode/JPK/jpkv7reader.cpp \
     main.cpp \
     mainwindow.cpp
 
 HEADERS += \
     CommonCode/JPK/headline.h \
     CommonCode/JPK/invoicesales.h \
-    CommonCode/JPK/jpk.h \
-    CommonCode/JPK/jpkreader.h \
+    CommonCode/JPK/jpkv7.h \
+    CommonCode/JPK/jpkv7reader.h \
     mainwindow.h
 
 FORMS += \

@@ -15,7 +15,7 @@ public:
     void setDateOfCreation(QString value = "");
     void setSystemName(QString value = "");
     void setPruposeOfDeposit(int value = 0);
-    void setOfficeCode(int value = 0);
+    void setOfficeCode(QString value = "");
     void setYear(int value = 0);
     void setMonth(int value = 0);
 
@@ -24,7 +24,7 @@ public:
     QString getDateOfCreation() const;
     QString getSystemName() const;
     int getPruposeOfDeposit() const;
-    int getOfficeCode() const;
+    QString getOfficeCode() const;
     int getYear() const;
     int getMonth() const;
 
@@ -35,7 +35,7 @@ private:
     QString m_dateOfCreation;
     QString m_systemName;
     int m_pruposeOfDeposit;
-    int m_officeCode;
+    QString m_officeCode;
     int m_year;
     int m_month;
 };

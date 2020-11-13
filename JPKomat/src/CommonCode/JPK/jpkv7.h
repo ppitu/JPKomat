@@ -2,12 +2,12 @@
 #define JPK_H
 
 #include "headline.h"
-#include "jpkreader.h"
+#include "jpkv7reader.h"
 
-class JPK
+class JPKV7
 {
 public:
-    JPK();
+    JPKV7();
 
     Headline getHeadline();
 private:
@@ -15,7 +15,7 @@ private:
 private:
     Headline m_headline;
 
-    JPKReader m_jpkreader;
+    JPKV7Reader m_jpkreader;
 };
 
 #endif // JPK_H

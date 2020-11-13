@@ -1,18 +1,18 @@
-#include "jpkreader.h"
+#include "jpkv7reader.h"
 
 #include <QtXml>
 #include <QFile>
 
-JPKReader::JPKReader()
+JPKV7Reader::JPKV7Reader()
 {
 
 }
 
-bool JPKReader::readHeadline(Headline& headline)
+bool JPKV7Reader::readHeadline(Headline& headline)
 {
     QDomDocument xmlBOM;
 
-    QFile f("jpk.xml");
+    QFile f("source_test_file/test-headline.xml");
 
     if(!f.open(QIODevice::ReadOnly))
     {
@@ -47,7 +47,7 @@ bool JPKReader::readHeadline(Headline& headline)
                 headline.setDateOfCreation(Child.firstChild().toText().data());
             }
 
-            if(Child.tagName() == "NazwaSystemy")
+            if(Child.tagName() == "NazwaSystemu")
             {
                 headline.setSystemName(Child.firstChild().toText().data());
             }
@@ -59,7 +59,7 @@ bool JPKReader::readHeadline(Headline& headline)
 
             if(Child.tagName() == "KodUrzedu")
             {
-                headline.setOfficeCode(Child.firstChild().toText().data().toInt());
+                headline.setOfficeCode(Child.firstChild().toText().data());
             }
 
             if(Child.tagName() == "Rok")

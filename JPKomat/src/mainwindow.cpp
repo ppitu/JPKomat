@@ -1,7 +1,7 @@
 #include "mainwindow.h"
 #include "ui_mainwindow.h"
 
-#include "CommonCode/JPK/jpk.h"
+#include "CommonCode/JPK/jpkv7.h"
 #include "CommonCode/JPK/headline.h"
 
 MainWindow::MainWindow(QWidget *parent)
@@ -19,7 +19,7 @@ MainWindow::~MainWindow()
 
 void MainWindow::on_pushButton_clicked()
 {
-    JPK jpk;
+    JPKV7 jpk;
 
     auto z = jpk.getHeadline();
 
@@ -28,7 +28,13 @@ void MainWindow::on_pushButton_clicked()
     ui->label_3->setText(z.getDateOfCreation());
     ui->label_4->setText(z.getSystemName());
     ui->label_5->setText(QString::number(z.getPruposeOfDeposit()));
-    ui->label_6->setText(QString::number(z.getOfficeCode()));
+    ui->label_6->setText(z.getOfficeCode());
     ui->label_7->setText(QString::number(z.getYear()));
     ui->label_8->setText(QString::number(z.getMonth()));
+}
+
+void MainWindow::on_pushButton_2_clicked()
+{
+    QDir dir;
+    ui->label_9->setText(dir.currentPath());
 }

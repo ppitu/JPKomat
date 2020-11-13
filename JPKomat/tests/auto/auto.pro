@@ -1,3 +1,5 @@
 TEMPLATE = subdirs
 
-SUBDIRS += JPKReaderTest
+SUBDIRS += JPKV7ReaderHeadline_Test
+
+

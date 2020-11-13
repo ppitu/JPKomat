@@ -30,7 +30,7 @@ void Headline::setPruposeOfDeposit(int value)
     m_pruposeOfDeposit = value;
 }
 
-void Headline::setOfficeCode(int value)
+void Headline::setOfficeCode(QString value)
 {
     m_officeCode = value;
 }
@@ -70,7 +70,7 @@ int Headline::getPruposeOfDeposit() const
     return m_pruposeOfDeposit;
 }
 
-int Headline::getOfficeCode() const
+QString Headline::getOfficeCode() const
 {
     return m_officeCode;
 }

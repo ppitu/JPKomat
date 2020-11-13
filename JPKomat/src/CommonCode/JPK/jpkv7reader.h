@@ -4,10 +4,10 @@
 
 #include "headline.h"
 
-class JPKReader
+class JPKV7Reader
 {
 public:
-    JPKReader();
+    JPKV7Reader();
 
     bool readHeadline(Headline& headline);
 
