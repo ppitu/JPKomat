@@ -10,6 +10,7 @@ CONFIG += c++11
 #DEFINES += QT_DISABLE_DEPRECATED_BEFORE=0x060000    # disables all the APIs deprecated before Qt 6.0.0
 
 SOURCES += \
+    CommonCode/JPK/document.cpp \
     CommonCode/JPK/headline.cpp \
     CommonCode/JPK/invoicesales.cpp \
     CommonCode/JPK/jpkv7.cpp \
@@ -18,6 +19,8 @@ SOURCES += \
     mainwindow.cpp
 
 HEADERS += \
+    CommonCode/JPK/IDocument.h \
+    CommonCode/JPK/document.h \
     CommonCode/JPK/headline.h \
     CommonCode/JPK/invoicesales.h \
     CommonCode/JPK/jpkv7.h \

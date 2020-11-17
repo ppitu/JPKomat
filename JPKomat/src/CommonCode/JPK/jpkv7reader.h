@@ -7,9 +7,12 @@
 class JPKV7Reader
 {
 public:
-    JPKV7Reader();
+    JPKV7Reader(QString pathToFile);
 
     bool readHeadline(Headline& headline);
+
+private:
+    QString m_pathToFile;
 
 };
 

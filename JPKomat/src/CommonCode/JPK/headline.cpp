@@ -10,6 +10,16 @@ void Headline::setFormCode(QString value)
     m_formCode = value;
 }
 
+void Headline::setSystemCode(QString value)
+{
+    m_systemCode = value;
+}
+
+void Headline::setDiagramVersion(QString value)
+{
+    m_diagramVersion = value;
+}
+
 void Headline::setVariantForm(QString value)
 {
     m_variantForm = value;
@@ -28,6 +38,11 @@ void Headline::setSystemName(QString value)
 void Headline::setPruposeOfDeposit(int value)
 {
     m_pruposeOfDeposit = value;
+}
+
+void Headline::setPoz(QString value)
+{
+    m_poz = value;
 }
 
 void Headline::setOfficeCode(QString value)
@@ -50,6 +65,16 @@ QString Headline::getFormCode() const
     return m_formCode;
 }
 
+QString Headline::getSystemCode() const
+{
+    return m_systemCode;
+}
+
+QString Headline::getDiagramVersion() const
+{
+    return m_diagramVersion;
+}
+
 QString Headline::getVariantForm() const
 {
     return m_variantForm;
@@ -68,6 +93,11 @@ QString Headline::getSystemName() const
 int Headline::getPruposeOfDeposit() const
 {
     return m_pruposeOfDeposit;
+}
+
+QString Headline::getPoz() const
+{
+    return m_poz;
 }
 
 QString Headline::getOfficeCode() const

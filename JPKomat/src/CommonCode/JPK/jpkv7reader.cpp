@@ -1,9 +1,11 @@
 #include "jpkv7reader.h"
 
+
+#include <iostream>
 #include <QtXml>
 #include <QFile>
 
-JPKV7Reader::JPKV7Reader()
+JPKV7Reader::JPKV7Reader(QString pathToFile) : m_pathToFile(pathToFile)
 {
 
 }
@@ -12,7 +14,9 @@ bool JPKV7Reader::readHeadline(Headline& headline)
 {
     QDomDocument xmlBOM;
 
-    QFile f("source_test_file/test-headline.xml");
+    QFile f(m_pathToFile);
+
+    std::cout << m_pathToFile.toStdString() << "\n";
 
     if(!f.open(QIODevice::ReadOnly))
     {
@@ -35,6 +39,8 @@ bool JPKV7Reader::readHeadline(Headline& headline)
             if(Child.tagName() == "KodFormularza")
             {
                 headline.setFormCode(Child.firstChild().toText().data());
+                headline.setSystemCode(Child.attribute("kodSystemowy", "No kodSystemowy"));
+                headline.setDiagramVersion(Child.attribute("wersjaSchemy", "No wersjaSchemy"));
             }
 
             if(Child.tagName() == "WariantFormularza")
@@ -55,6 +61,7 @@ bool JPKV7Reader::readHeadline(Headline& headline)
             if(Child.tagName() == "CelZlozenia")
             {
                 headline.setPruposeOfDeposit(Child.firstChild().toText().data().toInt());
+                headline.setPoz(Child.attribute("poz", "No poz"));
             }
 
             if(Child.tagName() == "KodUrzedu")

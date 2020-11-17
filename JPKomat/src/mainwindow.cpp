@@ -19,7 +19,7 @@ MainWindow::~MainWindow()
 
 void MainWindow::on_pushButton_clicked()
 {
-    JPKV7 jpk;
+    JPKV7 jpk("../../JPKomat/source_test_file/test-headline.xml");
 
     auto z = jpk.getHeadline();
 
@@ -35,6 +35,6 @@ void MainWindow::on_pushButton_clicked()
 
 void MainWindow::on_pushButton_2_clicked()
 {
-    QDir dir;
-    ui->label_9->setText(dir.currentPath());
+    QString path = __FILE__;
+    ui->label_9->setText(path);
 }

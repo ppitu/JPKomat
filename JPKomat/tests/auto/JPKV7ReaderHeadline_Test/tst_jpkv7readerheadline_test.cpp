@@ -1,4 +1,5 @@
 #include <QtTest>
+#include <iostream>
 
 // add necessary includes here
 
@@ -15,10 +16,13 @@ public:
 
 private slots:
     void test_formCode();
+    void test_systemCode();
+    void test_diagramVersion();
     void test_variantForm();
     void test_dateOfCreation();
     void test_systemName();
     void test_pruposeOfDeposit();
+    void test_poz();
     void test_officeCode();
     void test_year();
     void test_month();
@@ -29,7 +33,7 @@ private:
     Headline m_headline;
 };
 
-JPKV7ReaderHeadline_Test::JPKV7ReaderHeadline_Test()
+JPKV7ReaderHeadline_Test::JPKV7ReaderHeadline_Test() : m_jpk("../../../../JPKomat/source_test_file/test-headline.xml")
 {
     m_headline = m_jpk.getHeadline();
 }
@@ -41,7 +45,19 @@ JPKV7ReaderHeadline_Test::~JPKV7ReaderHeadline_Test()
 
 void JPKV7ReaderHeadline_Test::test_formCode()
 {
+    std::cout << (__FILE__);
     QVERIFY(m_headline.getFormCode() == "JPK_VAT");
+
+}
+
+void JPKV7ReaderHeadline_Test::test_systemCode()
+{
+    QVERIFY(m_headline.getSystemCode() == "JPK_V7M (1)");
+}
+
+void JPKV7ReaderHeadline_Test::test_diagramVersion()
+{
+    QVERIFY(m_headline.getDiagramVersion() == "1-2E");
 }
 
 void JPKV7ReaderHeadline_Test::test_variantForm()
@@ -62,6 +78,11 @@ void JPKV7ReaderHeadline_Test::test_systemName()
 void JPKV7ReaderHeadline_Test::test_pruposeOfDeposit()
 {
     QVERIFY(m_headline.getPruposeOfDeposit() == 1);
+}
+
+void JPKV7ReaderHeadline_Test::test_poz()
+{
+    QVERIFY(m_headline.getPoz() == "P_7");
 }
 
 void JPKV7ReaderHeadline_Test::test_officeCode()
