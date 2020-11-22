@@ -33,8 +33,9 @@ private:
     Headline m_headline;
 };
 
-JPKV7ReaderHeadline_Test::JPKV7ReaderHeadline_Test() : m_jpk("../../../../JPKomat/source_test_file/test-headline.xml")
+JPKV7ReaderHeadline_Test::JPKV7ReaderHeadline_Test() : m_jpk(QFINDTESTDATA("test_file/test-headline.xml"))
 {
+    std::cout << "kon\n";
     m_headline = m_jpk.getHeadline();
 }
 
@@ -45,7 +46,8 @@ JPKV7ReaderHeadline_Test::~JPKV7ReaderHeadline_Test()
 
 void JPKV7ReaderHeadline_Test::test_formCode()
 {
-    std::cout << (__FILE__);
+    QString input = QFINDTESTDATA("test_file/test-headline.xml");
+    std::cout << input.toStdString();
     QVERIFY(m_headline.getFormCode() == "JPK_VAT");
 
 }

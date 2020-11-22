@@ -13,6 +13,10 @@ public:
 
 private:
     QString m_pathToFile;
+    QDomDocument xmlBOM;
+    QFile f;
+    QDomElement root;
+    QDomElement m_headline;
 
 };
 

@@ -1,6 +1,8 @@
 #include "mainwindow.h"
 #include "ui_mainwindow.h"
 
+#include <filesystem>
+
 #include "CommonCode/JPK/jpkv7.h"
 #include "CommonCode/JPK/headline.h"
 
@@ -19,9 +21,13 @@ MainWindow::~MainWindow()
 
 void MainWindow::on_pushButton_clicked()
 {
+
+
     JPKV7 jpk("../../JPKomat/source_test_file/test-headline.xml");
 
     auto z = jpk.getHeadline();
+
+
 
     ui->label->setText(z.getFormCode());
     ui->label_2->setText(z.getVariantForm());
@@ -36,5 +42,11 @@ void MainWindow::on_pushButton_clicked()
 void MainWindow::on_pushButton_2_clicked()
 {
     QString path = __FILE__;
+    path = QString::fromStdString(std::filesystem::absolute(__FILE__));
     ui->label_9->setText(path);
+}
+
+void MainWindow::on_pushButton_3_clicked()
+{
+
 }

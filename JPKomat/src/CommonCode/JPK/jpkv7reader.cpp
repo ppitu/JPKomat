@@ -5,34 +5,29 @@
 #include <QtXml>
 #include <QFile>
 
-JPKV7Reader::JPKV7Reader(QString pathToFile) : m_pathToFile(pathToFile)
+JPKV7Reader::JPKV7Reader(QString pathToFile) : m_pathToFile(pathToFile), f(pathToFile)
 {
-
-}
-
-bool JPKV7Reader::readHeadline(Headline& headline)
-{
-    QDomDocument xmlBOM;
-
-    QFile f(m_pathToFile);
-
-    std::cout << m_pathToFile.toStdString() << "\n";
-
     if(!f.open(QIODevice::ReadOnly))
     {
-        return false;
+        throw "Cannot open file (jpkv7reader.cpp)";
     }
 
     xmlBOM.setContent(&f);
     f.close();
 
-    QDomElement root = xmlBOM.documentElement();
+    root = xmlBOM.documentElement();
 
-    QDomElement Headline = root.firstChild().toElement();
 
-    if(Headline.tagName() == "Naglowek")
+
+}
+
+bool JPKV7Reader::readHeadline(Headline& headline)
+{
+    m_headline = root.firstChild().toElement();
+
+    if(m_headline.tagName() == "Naglowek")
     {
-        QDomElement Child = Headline.firstChild().toElement();
+        QDomElement Child = m_headline.firstChild().toElement();
 
         while(!Child.isNull())
         {
@@ -82,6 +77,8 @@ bool JPKV7Reader::readHeadline(Headline& headline)
             Child = Child.nextSibling().toElement();
         }
     }
+
+    root = root.nextSibling().toElement();
 
     return true;
 }

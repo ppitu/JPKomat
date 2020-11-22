@@ -1,6 +1,6 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <!DOCTYPE QtCreatorProject>
-<!-- Written by QtCreator 4.13.2, 2020-11-13T18:07:15. -->
+<!-- Written by QtCreator 4.13.2, 2020-11-22T20:05:41. -->
 <qtcreator>
  <data>
   <variable>EnvironmentId</variable>
@@ -67,10 +67,13 @@
    <valuemap type="QVariantMap" key="AutoTest.CheckStates">
     <value type="Qt::CheckState" key="/home/ppitu/QtProjekty/JPKomat/JPKomat/tests/auto/JPKV7ReaderHeadline_Test/tst_jpkv7readerheadline_test.cpp:JPKV7ReaderHeadline_Test">Checked</value>
     <value type="Qt::CheckState" key="/home/ppitu/QtProjekty/JPKomat/JPKomat/tests/auto/JPKV7ReaderHeadline_Test/tst_jpkv7readerheadline_test.cpp:test_dateOfCreation">Checked</value>
+    <value type="Qt::CheckState" key="/home/ppitu/QtProjekty/JPKomat/JPKomat/tests/auto/JPKV7ReaderHeadline_Test/tst_jpkv7readerheadline_test.cpp:test_diagramVersion">Checked</value>
     <value type="Qt::CheckState" key="/home/ppitu/QtProjekty/JPKomat/JPKomat/tests/auto/JPKV7ReaderHeadline_Test/tst_jpkv7readerheadline_test.cpp:test_formCode">Checked</value>
     <value type="Qt::CheckState" key="/home/ppitu/QtProjekty/JPKomat/JPKomat/tests/auto/JPKV7ReaderHeadline_Test/tst_jpkv7readerheadline_test.cpp:test_month">Checked</value>
     <value type="Qt::CheckState" key="/home/ppitu/QtProjekty/JPKomat/JPKomat/tests/auto/JPKV7ReaderHeadline_Test/tst_jpkv7readerheadline_test.cpp:test_officeCode">Checked</value>
+    <value type="Qt::CheckState" key="/home/ppitu/QtProjekty/JPKomat/JPKomat/tests/auto/JPKV7ReaderHeadline_Test/tst_jpkv7readerheadline_test.cpp:test_poz">Checked</value>
     <value type="Qt::CheckState" key="/home/ppitu/QtProjekty/JPKomat/JPKomat/tests/auto/JPKV7ReaderHeadline_Test/tst_jpkv7readerheadline_test.cpp:test_pruposeOfDeposit">Checked</value>
+    <value type="Qt::CheckState" key="/home/ppitu/QtProjekty/JPKomat/JPKomat/tests/auto/JPKV7ReaderHeadline_Test/tst_jpkv7readerheadline_test.cpp:test_systemCode">Checked</value>
     <value type="Qt::CheckState" key="/home/ppitu/QtProjekty/JPKomat/JPKomat/tests/auto/JPKV7ReaderHeadline_Test/tst_jpkv7readerheadline_test.cpp:test_systemName">Checked</value>
     <value type="Qt::CheckState" key="/home/ppitu/QtProjekty/JPKomat/JPKomat/tests/auto/JPKV7ReaderHeadline_Test/tst_jpkv7readerheadline_test.cpp:test_variantForm">Checked</value>
     <value type="Qt::CheckState" key="/home/ppitu/QtProjekty/JPKomat/JPKomat/tests/auto/JPKV7ReaderHeadline_Test/tst_jpkv7readerheadline_test.cpp:test_year">Checked</value>
