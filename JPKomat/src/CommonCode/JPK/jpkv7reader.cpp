@@ -78,6 +78,66 @@ bool JPKV7Reader::readHeadline(Headline& headline)
         }
     }
 
+    //root = ;
+
+    return true;
+}
+
+bool JPKV7Reader::readEntity(Entity& entity)
+{
+    m_entity = root.firstChildElement("Podmiot1");
+
+    if(m_entity.tagName() == "Podmiot1")
+    {
+        QDomElement TypeOfEntity = m_entity.firstChild().toElement();
+
+        if(TypeOfEntity.tagName() == "OsobaFizyczna")
+        {
+
+            QDomElement Child = TypeOfEntity.firstChild().toElement();
+
+            std::cout << Child.tagName().toStdString();
+
+            while(!Child.isNull())
+            {
+                if(Child.tagName() == "etd:NIP")
+                {
+                    entity.setNIP(Child.firstChild().toText().data().toInt());
+                }
+
+                if(Child.tagName() == "etd:ImiePierwsze")
+                {
+                    entity.setFirstName(Child.firstChild().toText().data());
+                }
+
+                if(Child.tagName() == "etd:Nazwisko")
+                {
+                    entity.setLastName(Child.firstChild().toText().data());
+                }
+
+                if(Child.tagName() == "etd:DataUrodzenia")
+                {
+                    entity.setDateOfBirth(Child.firstChild().toText().data());
+                }
+
+                if(Child.tagName() == "Email")
+                {
+                    entity.setEmail(Child.firstChild().toText().data());
+                }
+
+                if(Child.tagName() == "Telefon")
+                {
+                    entity.setPhone(Child.firstChild().toText().data());
+                }
+
+                Child = Child.nextSibling().toElement();
+            }
+        }
+
+    } else {
+    std::cout << "nie dziala";
+    }
+
     root = root.nextSibling().toElement();
 
     return true;

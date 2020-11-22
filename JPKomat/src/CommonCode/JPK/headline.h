@@ -3,7 +3,6 @@
 
 #include <QtXml>
 
-#include <QFile>
 
 class Headline
 {

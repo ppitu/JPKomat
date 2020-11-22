@@ -11,6 +11,7 @@ CONFIG += c++17
 
 SOURCES += \
     CommonCode/JPK/document.cpp \
+    CommonCode/JPK/entity.cpp \
     CommonCode/JPK/headline.cpp \
     CommonCode/JPK/invoicesales.cpp \
     CommonCode/JPK/jpkv7.cpp \
@@ -21,6 +22,7 @@ SOURCES += \
 HEADERS += \
     CommonCode/JPK/IDocument.h \
     CommonCode/JPK/document.h \
+    CommonCode/JPK/entity.h \
     CommonCode/JPK/headline.h \
     CommonCode/JPK/invoicesales.h \
     CommonCode/JPK/jpkv7.h \

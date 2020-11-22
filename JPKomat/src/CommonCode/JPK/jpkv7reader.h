@@ -3,6 +3,7 @@
 
 
 #include "headline.h"
+#include "entity.h"
 
 class JPKV7Reader
 {
@@ -10,6 +11,7 @@ public:
     JPKV7Reader(QString pathToFile);
 
     bool readHeadline(Headline& headline);
+    bool readEntity(Entity& entity);
 
 private:
     QString m_pathToFile;
@@ -17,6 +19,7 @@ private:
     QFile f;
     QDomElement root;
     QDomElement m_headline;
+    QDomElement m_entity;
 
 };
 

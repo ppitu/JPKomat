@@ -5,6 +5,8 @@
 
 #include "jpkv7reader.h"
 #include "jpkv7.h"
+#include "headline.h"
+#include "entity.h"
 
 class JPKV7ReaderHeadline_Test : public QObject
 {
@@ -35,7 +37,6 @@ private:
 
 JPKV7ReaderHeadline_Test::JPKV7ReaderHeadline_Test() : m_jpk(QFINDTESTDATA("test_file/test-headline.xml"))
 {
-    std::cout << "kon\n";
     m_headline = m_jpk.getHeadline();
 }
 
@@ -46,10 +47,7 @@ JPKV7ReaderHeadline_Test::~JPKV7ReaderHeadline_Test()
 
 void JPKV7ReaderHeadline_Test::test_formCode()
 {
-    QString input = QFINDTESTDATA("test_file/test-headline.xml");
-    std::cout << input.toStdString();
     QVERIFY(m_headline.getFormCode() == "JPK_VAT");
-
 }
 
 void JPKV7ReaderHeadline_Test::test_systemCode()
