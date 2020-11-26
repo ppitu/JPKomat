@@ -10,6 +10,7 @@ CONFIG += c++17
 #DEFINES += QT_DISABLE_DEPRECATED_BEFORE=0x060000    # disables all the APIs deprecated before Qt 6.0.0
 
 SOURCES += \
+    CommonCode/JPK/Window/jpkwindow.cpp \
     CommonCode/JPK/document.cpp \
     CommonCode/JPK/entity.cpp \
     CommonCode/JPK/headline.cpp \
@@ -21,6 +22,7 @@ SOURCES += \
 
 HEADERS += \
     CommonCode/JPK/IDocument.h \
+    CommonCode/JPK/Window/jpkwindow.h \
     CommonCode/JPK/document.h \
     CommonCode/JPK/entity.h \
     CommonCode/JPK/headline.h \
@@ -30,6 +32,7 @@ HEADERS += \
     mainwindow.h
 
 FORMS += \
+    CommonCode/JPK/Window/jpkwindow.ui \
     mainwindow.ui
 
 # Default rules for deployment.

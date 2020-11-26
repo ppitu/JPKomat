@@ -15,6 +15,11 @@ void Entity::setFirstName(QString value)
     m_firstName = value;
 }
 
+void Entity::setFullName(QString value)
+{
+    m_fullName = value;
+}
+
 void Entity::setLastName(QString value)
 {
     m_lastName = value;
@@ -43,6 +48,11 @@ int Entity::getNIP() const
 QString Entity::getFirstName() const
 {
     return m_firstName;
+}
+
+QString Entity::getFullName() const
+{
+    return m_fullName;
 }
 
 QString Entity::getLastName() const

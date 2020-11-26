@@ -10,6 +10,7 @@ public:
 
     void setNIP(int value = 0);
     void setFirstName(QString value = "");
+    void setFullName(QString value = "");
     void setLastName(QString value = "");
     void setDateOfBirth(QString value = "");
     void setEmail(QString value = "");
@@ -17,6 +18,7 @@ public:
 
     int getNIP() const;
     QString getFirstName() const;
+    QString getFullName() const;
     QString getLastName() const;
     QString getDateOfBirth() const;
     QString getEmail() const;
@@ -25,6 +27,7 @@ public:
 private:
     int m_nip;
     QString m_firstName;
+    QString m_fullName;
     QString m_lastName;
     QString m_dateOfBirth;
     QString m_email;

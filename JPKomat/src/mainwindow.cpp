@@ -5,6 +5,7 @@
 
 #include "CommonCode/JPK/jpkv7.h"
 #include "CommonCode/JPK/headline.h"
+#include "CommonCode/JPK/Window/jpkwindow.h"
 
 MainWindow::MainWindow(QWidget *parent)
     : QMainWindow(parent)
@@ -49,4 +50,12 @@ void MainWindow::on_pushButton_2_clicked()
 void MainWindow::on_pushButton_3_clicked()
 {
 
+}
+
+void MainWindow::on_pushButton_4_clicked()
+{
+    JpkWindow *jpk_window = new JpkWindow(this);
+    jpk_window->exec();
+
+   delete jpk_window;
 }

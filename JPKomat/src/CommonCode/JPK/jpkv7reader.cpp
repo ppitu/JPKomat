@@ -132,10 +132,40 @@ bool JPKV7Reader::readEntity(Entity& entity)
 
                 Child = Child.nextSibling().toElement();
             }
+        } else if (TypeOfEntity.tagName() == "OsobaNiefizyczna")
+        {
+            QDomElement Child = TypeOfEntity.firstChild().toElement();
+
+            std::cout << Child.tagName().toStdString();
+
+            while(!Child.isNull())
+            {
+                if(Child.tagName() == "NIP")
+                {
+                    entity.setNIP(Child.firstChild().toText().data().toInt());
+                }
+
+                if(Child.tagName() == "PelnaNazwa")
+                {
+                    entity.setFullName(Child.firstChild().toText().data());
+                }
+
+                if(Child.tagName() == "Email")
+                {
+                    entity.setEmail(Child.firstChild().toText().data());
+                }
+
+                if(Child.tagName() == "Telefon")
+                {
+                    entity.setPhone(Child.firstChild().toText().data());
+                }
+
+                Child = Child.nextSibling().toElement();
+            }
         }
 
     } else {
-    std::cout << "nie dziala";
+        return false;
     }
 
     root = root.nextSibling().toElement();
