@@ -3,6 +3,9 @@
 
 #include <QMainWindow>
 
+#include "CommonCode/JPK/entity.h"
+#include "CommonCode/JPK/headline.h"
+
 QT_BEGIN_NAMESPACE
 namespace Ui { class MainWindow; }
 QT_END_NAMESPACE
@@ -22,9 +25,12 @@ private slots:
 
     void on_pushButton_3_clicked();
 
-    void on_pushButton_4_clicked();
+    void on_btnJpkWindow_clicked();
 
 private:
     Ui::MainWindow *ui;
+
+    Headline m_headline;
+    Entity m_entity;
 };
 #endif // MAINWINDOW_H

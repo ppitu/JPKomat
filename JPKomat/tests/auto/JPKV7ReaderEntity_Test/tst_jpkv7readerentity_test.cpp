@@ -2,7 +2,6 @@
 
 // add necessary includes here
 
-#include "jpkv7.h"
 #include "jpkv7reader.h"
 #include "entity.h"
 #include "headline.h"
@@ -25,17 +24,18 @@ private slots:
     void test_phone();
 
 private:
-    JPKV7 m_jpk_person;
-    JPKV7 m_jpk_company;
+    JPKV7Reader m_reader_person;
+    JPKV7Reader m_reader_company;
+
     Entity m_entity_person;
     Entity m_entity_company;
 
 };
 
-jpkv7readerentity_test::jpkv7readerentity_test() : m_jpk_person(QFINDTESTDATA("test_file/test-entity(person).xml")), m_jpk_company(QFINDTESTDATA("test_file/test-entity(company).xml"))
+jpkv7readerentity_test::jpkv7readerentity_test() : m_reader_person(QFINDTESTDATA("test_file/test-entity(person).xml")), m_reader_company(QFINDTESTDATA("test_file/test-entity(company).xml"))
 {
-    m_entity_person = m_jpk_person.getEntity();
-    m_entity_company = m_jpk_company.getEntity();
+    m_reader_person.readEntity(m_entity_person);
+    m_reader_company.readEntity(m_entity_company);
 }
 
 jpkv7readerentity_test::~jpkv7readerentity_test()

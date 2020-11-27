@@ -4,7 +4,6 @@
 // add necessary includes here
 
 #include "jpkv7reader.h"
-#include "jpkv7.h"
 #include "headline.h"
 #include "entity.h"
 
@@ -31,13 +30,14 @@ private slots:
 
 
 private:
-    JPKV7 m_jpk;
+    //JPKV7 m_jpk;
+    JPKV7Reader m_reader;
     Headline m_headline;
 };
 
-JPKV7ReaderHeadline_Test::JPKV7ReaderHeadline_Test() : m_jpk(QFINDTESTDATA("test_file/test-headline.xml"))
+JPKV7ReaderHeadline_Test::JPKV7ReaderHeadline_Test() : m_reader(QFINDTESTDATA("test_file/test-headline.xml"))
 {
-    m_headline = m_jpk.getHeadline();
+    m_reader.readHeadline(m_headline);
 }
 
 JPKV7ReaderHeadline_Test::~JPKV7ReaderHeadline_Test()

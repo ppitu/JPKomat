@@ -52,9 +52,14 @@ void MainWindow::on_pushButton_3_clicked()
 
 }
 
-void MainWindow::on_pushButton_4_clicked()
+void MainWindow::on_btnJpkWindow_clicked()
 {
-    JpkWindow *jpk_window = new JpkWindow(this);
+    JPKV7Reader jpkreader("test_file/jpk.xml");
+
+    jpkreader.readHeadline(m_headline);
+    jpkreader.readEntity(m_entity);
+
+    JpkWindow *jpk_window = new JpkWindow(m_headline, m_entity, this);
     jpk_window->exec();
 
    delete jpk_window;

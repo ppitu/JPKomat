@@ -170,7 +170,7 @@
      <string>PushButton</string>
     </property>
    </widget>
-   <widget class="QPushButton" name="pushButton_4">
+   <widget class="QPushButton" name="btnJpkWindow">
     <property name="geometry">
      <rect>
       <x>440</x>

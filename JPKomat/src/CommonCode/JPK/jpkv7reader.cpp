@@ -96,8 +96,6 @@ bool JPKV7Reader::readEntity(Entity& entity)
 
             QDomElement Child = TypeOfEntity.firstChild().toElement();
 
-            std::cout << Child.tagName().toStdString();
-
             while(!Child.isNull())
             {
                 if(Child.tagName() == "etd:NIP")

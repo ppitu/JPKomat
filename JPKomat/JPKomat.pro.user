@@ -1,6 +1,6 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <!DOCTYPE QtCreatorProject>
-<!-- Written by QtCreator 4.13.2, 2020-11-22T23:00:00. -->
+<!-- Written by QtCreator 4.13.2, 2020-11-27T17:12:11. -->
 <qtcreator>
  <data>
   <variable>EnvironmentId</variable>
@@ -70,6 +70,7 @@
     <value type="Qt::CheckState" key="/home/ppitu/QtProjekty/JPKomat/JPKomat/tests/auto/JPKV7ReaderEntity_Test/tst_jpkv7readerentity_test.cpp:test_dateOfBirth">Checked</value>
     <value type="Qt::CheckState" key="/home/ppitu/QtProjekty/JPKomat/JPKomat/tests/auto/JPKV7ReaderEntity_Test/tst_jpkv7readerentity_test.cpp:test_email">Checked</value>
     <value type="Qt::CheckState" key="/home/ppitu/QtProjekty/JPKomat/JPKomat/tests/auto/JPKV7ReaderEntity_Test/tst_jpkv7readerentity_test.cpp:test_firstName">Checked</value>
+    <value type="Qt::CheckState" key="/home/ppitu/QtProjekty/JPKomat/JPKomat/tests/auto/JPKV7ReaderEntity_Test/tst_jpkv7readerentity_test.cpp:test_fullName">Checked</value>
     <value type="Qt::CheckState" key="/home/ppitu/QtProjekty/JPKomat/JPKomat/tests/auto/JPKV7ReaderEntity_Test/tst_jpkv7readerentity_test.cpp:test_lastName">Checked</value>
     <value type="Qt::CheckState" key="/home/ppitu/QtProjekty/JPKomat/JPKomat/tests/auto/JPKV7ReaderEntity_Test/tst_jpkv7readerentity_test.cpp:test_phone">Checked</value>
     <value type="Qt::CheckState" key="/home/ppitu/QtProjekty/JPKomat/JPKomat/tests/auto/JPKV7ReaderHeadline_Test/tst_jpkv7readerheadline_test.cpp:JPKV7ReaderHeadline_Test">Checked</value>
